@@ -83,14 +83,30 @@ def get_all_setting_file():
 
     return addr
 
+
+def initalizeManually(path):
+    addr = {
+        'Affinity': 'affinity_manager.json',
+        'Inventory': 'inventory.json',
+        'RunValue': 'run_values.json',
+        'StageCoach': 'stagecoach.json'
+    }
+    addr.update({"TopFolderAddr": path, 'ProfileSetting': 'profile_1.json'})
+
+    runfile = find_dir(os.path.join(path, 'profile_1_runs'))
+    addr.update({"RunFile": runfile[0]})
+
+    newestrun = os.path.join(path, 'profile_1_runs', runfile[0],
+                             get_newest_dir(os.path.join(path, 'profile_1_runs', runfile[0])))
+    addr.update({'NewestRun': newestrun})
+
+    return addr
+
+
+
 # print(get_profiles_folder())
 # print(get_all_setting_file())
-
-
-
-
-
-
+# print(initalizeManually(r'C:\Users\lenovo\AppData\LocalLow\RedHook\Darkest Dungeon II\SaveFiles\a2b87b9734af4f8983298cc3ecda7005\profiles'))
 
 
 
