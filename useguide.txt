@@ -1,7 +1,10 @@
 how to use the editor:
-1.download all the python files;
-2.run userInterface.py in terminal or any IDE as you like
-3.follow the instruction
+1.download the exe file;
+2.execute
+3.follow the instruction and scan the save address
+4.if auto-scan fails, you might need to enter the address manually
+  in most cases, the address has the following format:C:\Users\YOURUSERNAME\AppData\LocalLow\RedHook\Darkest Dungeon II\SaveFiles\SOMERANDOMNUMBER\profiles
+  note that the address has to end with 'profiles'
 
 possible errors:
 since the program hasn't been widely tested, basically all kinds of error might occur
@@ -9,9 +12,12 @@ but the most possible error is that the program fail to locate your save file.
 anyway, you encounter an error, leave me a feedback, thx.
 
 如何使用：
-1.下载所有的.py文件
-2.在terminal或编辑器中运行userInterface.py 
-3.根据提示进行存档修改
+1.下载.exe文件
+2.双击运行
+3.根据提示进行存档扫描
+4.如果无法自动检测到存档地址，需要手动输入。
+  一般情况下地址格式为C:\Users\你的用户名\AppData\LocalLow\RedHook\Darkest Dungeon II\SaveFiles\一串随机数\profiles
+  注意输入的地址一定要以profiles结尾
 
 可能出现的问题：
 由于只在我个人电脑上测试过，所以基本任何错误都可能出现，也完全没有给exception做处理
