@@ -1,0 +1,19 @@
+how to use the editor:
+1.download all the python files;
+2.run userInterface.py in terminal or any IDE as you like
+3.follow the instruction
+
+possible errors:
+since the program hasn't been widely tested, basically all kinds of error might occur
+but the most possible error is that the program fail to locate your save file.
+anyway, you encounter an error, leave me a feedback, thx.
+
+如何使用：
+1.下载所有的.py文件
+2.在terminal或编辑器中运行userInterface.py 
+3.根据提示进行存档修改
+
+可能出现的问题：
+由于只在我个人电脑上测试过，所以基本任何错误都可能出现，也完全没有给exception做处理
+最可能的错误是定位不到你的存档文件
+总之，如果出现了错误，请给我反馈，谢啦
