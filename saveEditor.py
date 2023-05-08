@@ -17,6 +17,9 @@ baubles = {
         "name": "Rural Riches"
     }
 
+boss_unlock = [["brain", 10], ["lungs", 10], ["eyes", 10]]
+
+
 def Editor(function: int, addr: dict):
     if function == 1:   # 999 candles
         path = os.path.join(addr['TopFolderAddr'], addr['ProfileSetting'])
@@ -33,6 +36,9 @@ def Editor(function: int, addr: dict):
     elif function == 5:
         path = os.path.join(addr['NewestRun'], addr['Inventory'])
         editInventory(path)
+    elif function == 6:
+        path = os.path.join(addr['TopFolderAddr'], addr['ProfileSetting'])
+        unlockBoss(path)
 
     print('done editing执行完毕')
     print('------------------')
@@ -115,8 +121,26 @@ def editInventory(path):
         file.close()
 
 
+def unlockBoss(path):
+    with open(path, 'r') as file:
+        # print('success opening file')
+        data = json.load(file)
+        file.close()
+
+    if len(data['m_BossVictoryCounts']) == 3:
+        print('bosses already unlocked, no need for editing boss已经解锁，无需处理')
+    else:
+        data['m_BossSelectCounts'] = boss_unlock
+        data['m_BossVictoryCounts'] = boss_unlock
+
+    with open(path, 'w') as file:
+        json.dump(data, file, indent=4)
+        file.close()
+
+
 # editProfile('./test_json/profile_1.json')
 # editAffinity('./test_json/affinity_manager.json')
 # editStagecoachStatus('./test_json/run_values.json')
 # editInventory('./test_json/inventory.json')
+# unlockBoss('./test_json/profile_1.json')
 
