@@ -2,9 +2,10 @@ import sys
 import saveLocator
 import saveEditor
 
-MAX_FUNCTION = 5
+MAX_FUNCTION = 6
 
 print('DD2 save Editor ver 0.1\nauthor: Hyena\nlocating save file')
+print('tips: do not edit your save file before leaving the select stage不要在离开选择阶段前修改存档')
 print('please choose scan mode请选择扫描模式:')
 print('1.scan automatically自动扫描')
 print('2.manually enter address手动输入地址')
@@ -38,12 +39,14 @@ dummy = input()
 
 while 1:
     print('function select功能选择:')
+    print('---------run edit----------')
     print('1.add 999 candles增加999蜡烛')
     print('2.max affinity满好感度')
     print('3.repair stagecoach修复马车')
     print('4.add 20 upgrade point增加20技能点')
     print('5.add 40 relics and baubles增加40钱和遗产')
-    # print('6.unlock all bosses')
+    print('---------profile edit-----------')
+    print('6.unlock all bosses解锁前全部boss')
     print('0.exit program退出程序')
     function = int(input('input corresponding index and press enter输入对应数字并回车'))
     if function > MAX_FUNCTION or function < 0:
